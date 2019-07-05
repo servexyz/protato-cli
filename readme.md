@@ -36,11 +36,41 @@ npm install -g protato
 
 ## Usage
 
+<details>
+<summary>Config Example (<b>.protato.js</b>)</summary>
+<pre><code class="language-javascript">
+export default {
+  parent: {
+    dir: "sandbox/node-starter"
+  },
+  children: [
+    {
+      dir: "sandbox/npm-starter-sample-module",
+      src: "src"
+    },
+    {
+      dir: "sandbox/library-genesis",
+      src: "src"
+    }
+  ]
+};
+</code></pre>
+
+- <b><em>.protato.js</em></b> this file should be declared at the root of your project
+- <b>parent</b> is your main project; your entry point. It will consume children modules and do something useful with them.
+- <b>children</b> are the modules that will be "installed" into the parent module directory
+- <b>"dir"</b> refers to the relative directory where your projects are stored <em>from</em> your current working directory. This value will default to `process.cwd()`. You can override this by setting the environment variable <code>process.env.configRootDir</code>
+- <b>"src"</b> refers to the source directory where your source code is stored for your child project. It's the directory that's being watched. Hypothetically, you could make it your build directory as well if your project completely recompiles & rebuilds on every save (although I haven't tested this hypothetical; might be dragons here)
+  </details>
+
+## CLI
+
 ```
-$ unicorn-fun --help
+
+$ protato --help
 
   Usage
-    $ unicorn-fun [input]
+    $ protato [input]
 
   Options
     --postfix  Lorem ipsum  [Default: rainbows]
@@ -51,5 +81,3 @@ $ unicorn-fun --help
     $ cli-name ponies
     ponies & rainbows
 ```
-
-## Related
