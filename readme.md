@@ -14,6 +14,7 @@ Auto-update parent module when a child module's file changes.
 There are a lot of great projects (lerna, yarn workspaces, vscode) that solve code organization issues. I wanted a tool that allowed me to translate a simple config and enable watching without any extra configuration.
 
 I am using [repo-genesis](https://www.npmjs.com/package/repo-genesis) for managing my monoliths
+
 </details>
 
 <details>
@@ -24,7 +25,7 @@ I am using [repo-genesis](https://www.npmjs.com/package/repo-genesis) for managi
   
   <b>References</b>
   * <a href="https://docs.npmjs.com/files/folders">npm-folders</a>
-  * <a href="https://github.com/servexyz/protato-lib/pull/6">protato-lib/pull/6</a> for a play-by-play of the discovery process... AKA. All the things to not do.)
+  * <a href="https://github.com/servexyz/protato-lib/pull/6">protato-lib/pull/6</a> for a play-by-play of the discovery process(all the things to not do.)
 </details>
 
 ## Install
@@ -32,7 +33,6 @@ I am using [repo-genesis](https://www.npmjs.com/package/repo-genesis) for managi
 ```
 npm install -g protato
 ```
-
 
 ## Usage
 
