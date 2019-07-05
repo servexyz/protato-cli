@@ -72,12 +72,19 @@ $ protato --help
   Usage
     $ protato [input]
 
-  Options
-    --postfix  Lorem ipsum  [Default: rainbows]
+  Commands
+    $ protato yalc
+    > List your current packages; install yalc if directory not found
 
-  Examples
-    $ cli-name
-    unicorns & rainbows
-    $ cli-name ponies
-    ponies & rainbows
+    $ protato config
+    > Generate an empty config if you don't have one in your CWD
+
+    $ protato watch
+    > Begin watching your child modules for updates
+
+  Options
+    --yalc-link -YL
+    > [default] "Alternatively, you may use yalc link my-package which will create a symlink to the package content in node_modules and will not touch package.json (like npm/yarn link does)"
+    --yalc-add -YA
+    > "When you run yalc add my-package in your project it pulls package content into .yalc in the current folder and injects a file:/link: dependency into package.json"
 ```
