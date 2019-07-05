@@ -18,9 +18,13 @@ I am using [repo-genesis](https://www.npmjs.com/package/repo-genesis) for managi
 
 <details>
   <summary>How</summary>
-  Under the hood, this is using [https://github.com/whitecolor/yalc](yalc) which avoids some of the pain points around NPM global modules. 
+  Under the hood, this is using <a href="https://github.com/whitecolor/yalc">yalc</a> which avoids some of the pain points around NPM global modules. 
   
-  The reason I went with yalc was because of the difficulty of installing or linking modules to a specific directory in a cross-platform way (see [https://docs.npmjs.com/files/folders](npm-folders) or [this pull-request thread](https://github.com/servexyz/protato-lib/pull/6) for a play-by-play of the discovery process... AKA. All the things to not do.)
+  The reason I went with yalc was because of the difficulty of installing or linking modules to a specific directory in a cross-platform way.
+  
+  <b>References</b>
+  * <a href="https://docs.npmjs.com/files/folders">npm-folders</a>
+  * <a href="https://github.com/servexyz/protato-lib/pull/6">protato-lib/pull/6</a> for a play-by-play of the discovery process... AKA. All the things to not do.)
 </details>
 
 ## Install
