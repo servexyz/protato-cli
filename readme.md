@@ -37,7 +37,9 @@ npm install -g protato
 ## Usage
 
 <details>
-<summary>Config Example (<b>.protato.js</b>)</summary>
+<summary>Config Example</summary>
+<b>.protato.js</b> should be stored in your project's root directory. If your root directory and your parent are one in the same, then set the directory to "."
+
 <pre><code class="language-javascript">
 export default {
   parent: {
@@ -65,26 +67,51 @@ export default {
 
 ## CLI
 
-```
+### Commands
 
+<details><summary><code>yalc</code></summary>
+List your current packages; install yalc if directory not found.
+</details>
+
+<details><summary><code>config</code></summary>
+Generate an empty config if you don't have one in your CWD.
+</details>
+
+<details><summary><code>watch</code></summary>
+Begin watching your child modules for updates
+</details>
+
+### Flags
+
+<details>
+<summary><code>--yalc-link</code> <code>-yl</code> </summary>
+"Alternatively, you may use yalc link my-package which will create a symlink to the package content in node_modules and will not touch package.json (like npm/yarn link does)"
+</details>
+
+<details>
+<summary><code>--yalc-add</code> <code>-ya</code></summary>
+"When you run yalc add my-package in your project it pulls package content into .yalc in the current folder and injects a file:/link: dependency into package.json"
+</details>
+
+### Help Menu
+
+```
 $ protato --help
 
-  Usage
-    $ protato [input]
+Usage
+$ protato [command][--flag]
 
-  Commands
-    $ protato yalc
-    > List your current packages; install yalc if directory not found
+Commands
+$ protato yalc
+> List your current packages; install yalc if directory not found
 
-    $ protato config
-    > Generate an empty config if you don't have one in your CWD
+$ protato config
+> Generate an empty config if you don't have one in your CWD
 
-    $ protato watch
-    > Begin watching your child modules for updates
+$ protato watch
+> Begin watching your child modules for updates
 
-  Options
-    --yalc-link -YL
-    > [default] "Alternatively, you may use yalc link my-package which will create a symlink to the package content in node_modules and will not touch package.json (like npm/yarn link does)"
-    --yalc-add -YA
-    > "When you run yalc add my-package in your project it pulls package content into .yalc in the current folder and injects a file:/link: dependency into package.json"
+Options
+--yalc-link -yl
+--yalc-add -ya
 ```
