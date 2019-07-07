@@ -118,6 +118,7 @@ $ protato config
 $ protato watch
 > Begin watching your child modules for updates
 
+
 Options
 --yalc-link -yl (default)
 > Default. Creates symlink.
@@ -125,13 +126,17 @@ Options
 --yalc-add -ya
 > Injects dependency in your parent package.json
 
+
 Examples
 $ protato yalc
 > --> "package1", "package2"
+
 $ protato config
 > --> ".protato.js has been created"
+
 $ protato watch -ya
 > --> "Now adding child modules to parent module"
+
 $ protato watch -yl
 > --> "Now linking child modules to parent module"
 ```
