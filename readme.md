@@ -25,7 +25,7 @@ I am using [repo-genesis](https://www.npmjs.com/package/repo-genesis) for managi
   
   <b>References</b>
   * <a href="https://docs.npmjs.com/files/folders">npm-folders</a>
-  * <a href="https://github.com/servexyz/protato-lib/pull/6">protato-lib/pull/6</a> for a play-by-play of the discovery process(all the things to not do.)
+  * <a href="https://github.com/servexyz/protato-lib/pull/6">protato-lib/pull/6</a> for a play-by-play of the discovery process(all the things to not do)
 </details>
 
 ## Install
@@ -36,9 +36,15 @@ npm install -g protato
 
 ## Usage
 
+### Config
+
 <details>
-<summary>Config Example</summary>
+<summary>Name & Location</summary>
 <b>.protato.js</b> should be stored in your project's root directory. If your root directory and your parent are one in the same, then set the directory to "."
+</details>
+
+<details>
+<summary>Example</summary>
 
 <pre><code class="language-javascript">
 export default {
@@ -65,12 +71,11 @@ export default {
 - <b>"src"</b> refers to the source directory where your source code is stored for your child project. It's the directory that's being watched. Hypothetically, you could make it your build directory as well if your project completely recompiles & rebuilds on every save (although I haven't tested this hypothetical; might be dragons here)
   </details>
 
-## CLI
-
-### Commands
+### CLI `Commands`
 
 <details><summary><code>yalc</code></summary>
 List your current packages; install yalc if directory not found.
+
 </details>
 
 <details><summary><code>config</code></summary>
@@ -81,7 +86,7 @@ Generate an empty config if you don't have one in your CWD.
 Begin watching your child modules for updates
 </details>
 
-### Flags
+### CLI `Flags`
 
 <details>
 <summary><code>--yalc-link</code> <code>-yl</code> </summary>
@@ -93,7 +98,9 @@ Begin watching your child modules for updates
 "When you run yalc add my-package in your project it pulls package content into .yalc in the current folder and injects a file:/link: dependency into package.json"
 </details>
 
-### Help Menu
+<details><summary><code>--help</code></summary>Print help menu (identical to the command)</details>
+
+### CLI `Help Menu`
 
 ```
 $ protato --help
@@ -112,6 +119,19 @@ $ protato watch
 > Begin watching your child modules for updates
 
 Options
---yalc-link -yl
+--yalc-link -yl (default)
+> Default. Creates symlink.
+
 --yalc-add -ya
+> Injects dependency in your parent package.json
+
+Examples
+$ protato yalc
+> --> "package1", "package2"
+$ protato config
+> --> ".protato.js has been created"
+$ protato watch -ya
+> --> "Now adding child modules to parent module"
+$ protato watch -yl
+> --> "Now linking child modules to parent module"
 ```
