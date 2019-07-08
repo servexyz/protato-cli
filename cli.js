@@ -48,6 +48,12 @@ const cli = meow(helpMenuText, {
 	}
 });
 
-log(cli.input[0] || "link", cli.flags);
+log(
+	`input: ${cli.input[0] || "link"}\n flags: ${JSON.stringify(
+		cli.flags,
+		null,
+		2
+	)}`
+);
 
 module.exports = { helpMenuText };

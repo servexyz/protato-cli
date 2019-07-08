@@ -8,17 +8,17 @@ import { helpMenuText } from "./cli";
 
 test("main", async t => {
 	const { stdout } = await execa("./cli.js", ["--help"]);
-	// log(`foo: ${JSON.stringify(foo, null, 2)}`);
-	let { description } = await fs.readJson("./package.json");
-	// log(`oPkg: ${JSON.stringify(oPkg, null, 2)}`);
-	log(description);
+	const { description } = await fs.readJson("./package.json");
+	log(`Desc: ${description}`);
 	//TODO: Grab desc and prepend it to helpMenuText for it to match stdout
 	const pretty = {
 		pStdout: (() => {
-			prettier.format(stdout);
+			prettier.format(stdout, { parser: "babel" });
 		})(),
 		pHelp: (() => {
-			prettier.format(`${description}\n${helpMenuText}`);
+			// prettier.format(`${description}\n${helpMenuText}`, { parser: "babel" });
+			let str = `${description}\n${helpMenuText}`;
+			prettier.format(str, { parser: "babel" });
 		})()
 	};
 	const { pStdout, pHelp } = pretty;
