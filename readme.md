@@ -98,45 +98,4 @@ Begin watching your child modules for updates
 "When you run yalc add my-package in your project it pulls package content into .yalc in the current folder and injects a file:/link: dependency into package.json"
 </details>
 
-<details><summary><code>--help</code></summary>Print help menu (identical to the command)</details>
-
-### CLI `Help Menu`
-
-```
-$ protato --help
-
-Usage
-$ protato [command][--flag]
-
-Commands
-$ protato yalc
-> List your current packages; install yalc if directory not found
-
-$ protato config
-> Generate an empty config if you don't have one in your CWD
-
-$ protato watch
-> Begin watching your child modules for updates
-
-
-Options
---yalc-link -yl (default)
-> Default. Creates symlink.
-
---yalc-add -ya
-> Injects dependency in your parent package.json
-
-
-Examples
-$ protato yalc
-> --> "package1", "package2"
-
-$ protato config
-> --> ".protato.js has been created"
-
-$ protato watch -ya
-> --> "Now adding child modules to parent module"
-
-$ protato watch -yl
-> --> "Now linking child modules to parent module"
-```
+<details><summary><code>--help</code></summary>Print help menu (identical to the command). See [cli.js](./cli.js) for the full printout</details>

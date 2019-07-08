@@ -1,39 +1,45 @@
 {
-	"name": "unicorn-fun-cli",
-	"version": "0.0.0",
-	"description": "My awesome command-line tool",
+	"name": "protato",
+	"version": "0.0.1",
+	"description": "hot module linking",
 	"license": "MIT",
-	"repository": "YOUR-GITHUB-USERNAME/unicorn-fun-cli",
+	"repository": "servexyz/protato-cli",
 	"author": {
-		"name": "YOUR NAME",
-		"email": "YOUR EMAIL",
-		"url": "YOUR WEBSITE"
+		"name": "Alec Hale-Pletka",
+		"email": "me@alechp.com",
+		"url": "https://github.com/alechp"
 	},
 	"bin": {
-		"unicorn-fun": "cli.js"
+		"protato": "cli.js"
 	},
 	"engines": {
 		"node": ">=8"
 	},
 	"scripts": {
-		"test": "xo && ava"
+		"test": "ava"
 	},
 	"files": [
 		"cli.js"
 	],
 	"keywords": [
 		"cli",
-		"cli-app",
-		"unicorn",
-		"fun"
+		"protato",
+		"protoss",
+		"potato",
+		"yalc",
+		"hot",
+		"module",
+		"linking",
+		"file",
+		"watch"
 	],
 	"dependencies": {
-		"meow": "^5.0.0",
-		"unicorn-fun": "^0.0.0"
+		"chalk": "^2.4.2",
+		"meow": "^5.0.0"
 	},
 	"devDependencies": {
 		"ava": "^2.1.0",
 		"execa": "^2.0.0",
-		"xo": "^0.24.0"
+		"prettier": "^1.18.2"
 	}
 }
