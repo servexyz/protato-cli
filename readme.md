@@ -36,7 +36,7 @@ npm install -g protato
 
 ## Usage
 
-### Config
+### CLI `Config`
 
 <details>
 <summary>Name & Location</summary>
