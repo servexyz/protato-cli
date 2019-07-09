@@ -97,5 +97,5 @@ Begin watching your child modules for updates
 <summary><code>--yalc-add</code> <code>-ya</code></summary>
 "When you run yalc add my-package in your project it pulls package content into .yalc in the current folder and injects a file:/link: dependency into package.json"
 </details>
+<details><summary><code>--help</code></summary>Print help menu (identical to the command). See <a href="cli.js">cli.js</a> for the full printout</details>
 
-<details><summary><code>--help</code></summary>Print help menu (identical to the command). See [cli.js](./cli.js) for the full printout</details>
