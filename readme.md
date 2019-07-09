@@ -71,31 +71,13 @@ export default {
 - <b>"src"</b> refers to the source directory where your source code is stored for your child project. It's the directory that's being watched. Hypothetically, you could make it your build directory as well if your project completely recompiles & rebuilds on every save (although I haven't tested this hypothetical; might be dragons here)
   </details>
 
-### CLI `Commands`
+### CLI
 
-<details><summary><code>yalc</code></summary>
-List your current packages; install yalc if directory not found.
-
-</details>
-
-<details><summary><code>config</code></summary>
-Generate an empty config if you don't have one in your CWD.
-</details>
-
-<details><summary><code>watch</code></summary>
-Begin watching your child modules for updates
-</details>
-
-### CLI `Flags`
-
-<details>
-<summary><code>--yalc-link</code> <code>-yl</code> </summary>
-"Alternatively, you may use yalc link my-package which will create a symlink to the package content in node_modules and will not touch package.json (like npm/yarn link does)"
-</details>
-
-<details>
-<summary><code>--yalc-add</code> <code>-ya</code></summary>
-"When you run yalc add my-package in your project it pulls package content into .yalc in the current folder and injects a file:/link: dependency into package.json"
-</details>
-<details><summary><code>--help</code></summary>Print help menu (identical to the command). See <a href="cli.js">cli.js</a> for the full printout</details>
-
+| Type    | Name     | Description                                                      |
+|:--------|:---------|:-----------------------------------------------------------------|
+| Command | `yalc`   | List your current packages; install yalc if directory not found. |
+| Command | `config` | Generate an empty config if you don't have one in your CWD.      |
+| Command | `watch`  | Begin watching your child modules for updates                    |
+| Flag    | `--link` | Add child package symlink in your parent project                 |
+| Flag    | `--add`  | Pull child package contents into your parent project             |
+| Flag    | `--help` | Print help menu                                                  |
