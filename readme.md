@@ -71,13 +71,18 @@ export default {
 - <b>"src"</b> refers to the source directory where your source code is stored for your child project. It's the directory that's being watched. Hypothetically, you could make it your build directory as well if your project completely recompiles & rebuilds on every save (although I haven't tested this hypothetical; might be dragons here)
   </details>
 
-### CLI
+### CLI `Commands`
 
-| Type    | Name     | Description                                                      |
-|:--------|:---------|:-----------------------------------------------------------------|
-| Command | `yalc`   | List your current packages; install yalc if directory not found. |
-| Command | `config` | Generate an empty config if you don't have one in your CWD.      |
-| Command | `watch`  | Begin watching your child modules for updates                    |
-| Flag    | `--link` | Add child package symlink in your parent project                 |
-| Flag    | `--add`  | Pull child package contents into your parent project             |
-| Flag    | `--help` | Print help menu                                                  |
+| Name     | Description                                                      |
+|:---------|:-----------------------------------------------------------------|
+| `yalc`   | List your current packages; install yalc if directory not found. |
+| `config` | Generate an empty config if you don't have one in your CWD.      |
+| `watch`  | Begin watching your child modules for updates                    |
+
+### CLI `Flags`
+
+| Name     | Description                                          |
+|:---------|:-----------------------------------------------------|
+| `--link` | Add child package symlink in your parent project     |
+| `--add`  | Pull child package contents into your parent project |
+| `--help` | Print help menu                                      |
