@@ -35,13 +35,13 @@
 	],
 	"dependencies": {
 		"chalk": "^2.4.2",
+		"condense-whitespace": "^2.0.0",
 		"fs-extra": "^8.1.0",
 		"meow": "^5.0.0",
 		"tacker": "^0.1.0"
 	},
 	"devDependencies": {
 		"ava": "^2.1.0",
-		"execa": "^2.0.3",
-		"prettier": "^1.18.2"
+		"execa": "^2.0.3"
 	}
 }
