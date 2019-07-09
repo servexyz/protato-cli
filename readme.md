@@ -1,6 +1,6 @@
 # Protato
 
-> Hot-module updating
+> HMR. Auto-update parent module's child dependency when you update a child dependency's file
 
 ## FAQ
 
@@ -11,10 +11,10 @@ Auto-update parent module when a child module's file changes.
 
 <details>
   <summary>Why</summary>
-There are a lot of great projects (lerna, yarn workspaces, vscode) that solve code organization issues. I wanted a tool that allowed me to translate a simple config and enable watching without any extra configuration.
+There are a lot of great projects (lerna, yarn workspaces, vscode) that solve code organization issues. I wanted a HMR tool that parsed a config and worked with my monolith tool of choice ( [repo-genesis](https://www.npmjs.com/package/repo-genesis) )
 
-I am using [repo-genesis](https://www.npmjs.com/package/repo-genesis) for managing my monoliths
-
+This is a summary of how Protato fits into my design/development flow.
+<img src="./docs/Flows - UI - Protato - Protato - Tech Summary.png" alt="protato tech summary"/>
 </details>
 
 <details>
