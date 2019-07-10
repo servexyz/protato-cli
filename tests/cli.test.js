@@ -1,5 +1,4 @@
 const log = console.log;
-import path from "path";
 import test from "ava";
 import execa from "execa";
 import fs from "fs-extra";
@@ -15,8 +14,23 @@ test("help menu prints correctly", async t => {
 	t.is(condenseWhitspace(stdout), condenseWhitspace(generatedHelpText));
 });
 
-// test("protato-lib init", async t => {
-// 	const out = init(path.resolve(__dirname));
-// 	printMirror({ out }, "yellow", "grey");
-// 	t.pass();
-// });
+test("protato-lib init", async t => {
+	const inlineConfig = {
+		parent: {
+			dir: "sandbox/node-starter"
+		},
+		children: [
+			{
+				dir: "sandbox/npm-starter-sample-module",
+				src: "src"
+			},
+			{
+				dir: "sandbox/library-genesis",
+				src: "src"
+			}
+		]
+	};
+
+	init(__dirname, inlineConfig);
+	t.pass();
+});

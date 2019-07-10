@@ -41,10 +41,14 @@
 		"tacker": "^0.1.2"
 	},
 	"devDependencies": {
+		"@babel/polyfill": "^7.4.4",
 		"ava": "^2.1.0",
 		"execa": "^2.0.3"
 	},
 	"ava": {
+		"require": [
+			"@babel/polyfill"
+		],
 		"files": [
 			"tests/**/*"
 		]
