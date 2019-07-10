@@ -47,7 +47,7 @@ npm install -g protato
 <summary>Example</summary>
 
 <pre><code class="language-javascript">
-export default {
+export const config = {
   parent: {
     dir: "sandbox/node-starter"
   },

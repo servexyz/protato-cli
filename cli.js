@@ -48,15 +48,15 @@ const cli = meow(helpMenuText, {
 		}
 	}
 });
-function handler() {
-	log(
-		`input: ${cli.input[0] || "link"}\n flags: ${JSON.stringify(
-			cli.flags,
-			null,
-			2
-		)}`
-	);
-	init();
-}
+
+// (function handler() {
+// 	log(
+// 		`input: ${cli.input[0] || "link"}\n flags: ${JSON.stringify(
+// 			cli.flags,
+// 			null,
+// 			2
+// 		)}`
+// 	);
+// })();
 
 module.exports = { helpMenuText };

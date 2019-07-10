@@ -41,7 +41,12 @@
 		"tacker": "^0.1.2"
 	},
 	"devDependencies": {
-		"ava": "^2.2.0",
+		"ava": "^2.1.0",
 		"execa": "^2.0.3"
+	},
+	"ava": {
+		"files": [
+			"tests/**/*"
+		]
 	}
 }
