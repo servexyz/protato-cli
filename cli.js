@@ -2,6 +2,7 @@
 "use strict";
 const log = console.log;
 const meow = require("meow");
+const { init } = require("protato-lib");
 
 const helpMenuText = `$ protato --help
 
@@ -47,13 +48,15 @@ const cli = meow(helpMenuText, {
 		}
 	}
 });
-
-log(
-	`input: ${cli.input[0] || "link"}\n flags: ${JSON.stringify(
-		cli.flags,
-		null,
-		2
-	)}`
-);
+function handler() {
+	log(
+		`input: ${cli.input[0] || "link"}\n flags: ${JSON.stringify(
+			cli.flags,
+			null,
+			2
+		)}`
+	);
+	init();
+}
 
 module.exports = { helpMenuText };

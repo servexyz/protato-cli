@@ -11,7 +11,7 @@ Auto-update parent module when a child module's file changes.
 
 <details>
   <summary>Why</summary>
-There are a lot of great projects (lerna, yarn workspaces, vscode) that solve code organization issues. I wanted a HMR tool that parsed a config and worked with my monolith tool of choice ( [repo-genesis](https://www.npmjs.com/package/repo-genesis) )
+There are a lot of great projects (lerna, yarn workspaces, vscode) that solve code organization issues. I wanted a HMR tool that parsed a config and worked with my monolith tool of choice ( <a href="https://www.npmjs.com/package/repo-genesis">repo-genesis</a> )
 
 This is a summary of how Protato fits into my design/development flow.
 <img src="./docs/Flows - UI - Protato - Protato - Tech Summary.png" alt="protato tech summary"/>
@@ -73,16 +73,16 @@ export default {
 
 ### CLI `Commands`
 
-| Name     | Description                                                      |
-|:---------|:-----------------------------------------------------------------|
-| `yalc`   | List your current packages; install yalc if directory not found. |
-| `config` | Generate an empty config if you don't have one in your CWD.      |
-| `watch`  | Begin watching your child modules for updates                    |
+| Status | Name     | Description                                                      |
+|:-------|:---------|:-----------------------------------------------------------------|
+| :x:    | `yalc`   | List your current packages; install yalc if directory not found. |
+| :x:    | `config` | Generate an empty config if you don't have one in your CWD.      |
+| :x:    | `watch`  | Begin watching your child modules for updates                    |
 
 ### CLI `Flags`
 
-| Name     | Description                                          |
-|:---------|:-----------------------------------------------------|
-| `--link` | Add child package symlink in your parent project     |
-| `--add`  | Pull child package contents into your parent project |
-| `--help` | Print help menu                                      |
+| Status | Name     | Description                                          |
+|:-------|:---------|:-----------------------------------------------------|
+| :x:    | `--link` | Add child package symlink in your parent project     |
+| :x:    | `--add`  | Pull child package contents into your parent project |
+| :x:    | `--help` | Print help menu                                      |

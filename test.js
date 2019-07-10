@@ -12,3 +12,8 @@ test("help menu prints correctly", async t => {
 	let generatedHelpText = `${description} ${helpMenuText}`;
 	t.is(condenseWhitspace(stdout), condenseWhitspace(generatedHelpText));
 });
+
+test("protato-lib is started", async t => {
+	const { stdout } = await execa("./cli.js");
+	t.truthy(stdout);
+});
