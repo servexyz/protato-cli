@@ -1,6 +1,6 @@
 {
 	"name": "protato",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"description": "hot module linking",
 	"license": "MIT",
 	"repository": "servexyz/protato-cli",
