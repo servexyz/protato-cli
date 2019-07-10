@@ -39,10 +39,10 @@
 		"fs-extra": "^8.1.0",
 		"meow": "^5.0.0",
 		"protato-lib": "^0.1.1",
-		"tacker": "^0.1.0"
+		"tacker": "^0.1.2"
 	},
 	"devDependencies": {
-		"ava": "^2.1.0",
+		"ava": "^2.2.0",
 		"execa": "^2.0.3"
 	}
 }
