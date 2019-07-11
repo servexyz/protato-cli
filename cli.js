@@ -3,6 +3,8 @@
 const log = console.log;
 const meow = require("meow");
 const { init } = require("protato-lib");
+const { printMirror } = require("tacker");
+const path = require("path");
 
 const helpMenuText = `$ protato --help
 
@@ -49,14 +51,17 @@ const cli = meow(helpMenuText, {
 	}
 });
 
-// (function handler() {
-// 	log(
-// 		`input: ${cli.input[0] || "link"}\n flags: ${JSON.stringify(
-// 			cli.flags,
-// 			null,
-// 			2
-// 		)}`
-// 	);
-// })();
+(function handler() {
+	log(
+		`input: ${cli.input[0] || "link"}\n flags: ${JSON.stringify(
+			cli.flags,
+			null,
+			2
+		)}`
+	);
+	let { config } = require(path.resolve(process.cwd(), ".protato.js"));
+	printMirror({ config }, "blue", "grey");
+	init(process.cwd(), config);
+})();
 
 module.exports = { helpMenuText };
