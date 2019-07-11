@@ -52,6 +52,7 @@
 		],
 		"files": [
 			"tests/**/*"
-		]
+		],
+		"verbose": true
 	}
 }

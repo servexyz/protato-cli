@@ -14,7 +14,7 @@ test("help menu prints correctly", async t => {
 	t.is(condenseWhitspace(stdout), condenseWhitspace(generatedHelpText));
 });
 
-test("protato-lib init", async t => {
+test("protato-lib init inline config", async t => {
 	const inlineConfig = {
 		parent: {
 			dir: "sandbox/node-starter"
@@ -32,5 +32,10 @@ test("protato-lib init", async t => {
 	};
 
 	init(__dirname, inlineConfig);
+	t.pass();
+});
+
+test("protato-lib init .protato.js config", async t => {
+	await execa("./cli.js", ["watch"]);
 	t.pass();
 });

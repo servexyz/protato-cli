@@ -1,4 +1,4 @@
-export const config = {
+const config = {
 	parent: {
 		dir: "sandbox/node-starter"
 	},
@@ -13,3 +13,5 @@ export const config = {
 		}
 	]
 };
+
+module.exports = { config };

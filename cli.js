@@ -5,6 +5,7 @@ const meow = require("meow");
 const { init } = require("protato-lib");
 const { printMirror } = require("tacker");
 const path = require("path");
+const chalk = require("chalk");
 
 const helpMenuText = `$ protato --help
 
@@ -51,17 +52,27 @@ const cli = meow(helpMenuText, {
 	}
 });
 
-(function handler() {
-	log(
-		`input: ${cli.input[0] || "link"}\n flags: ${JSON.stringify(
-			cli.flags,
-			null,
-			2
-		)}`
-	);
-	let { config } = require(path.resolve(process.cwd(), ".protato.js"));
+log(
+	`input: ${cli.input[0] || "link"}\n flags: ${JSON.stringify(
+		cli.flags,
+		null,
+		2
+	)}`
+);
+async function watch() {
+	let { config } = require(path.resolve(process.cwd(), "./.protato.js"));
+	// let { config } = await fs.readJson(
+	// 	path.resolve(process.cwd(), ".protato.js")
+	// );
 	printMirror({ config }, "blue", "grey");
 	init(process.cwd(), config);
-})();
+}
+switch (cli.input[0].toLowerCase()) {
+	case "watch":
+		watch();
+		break;
+	default:
+		log(`${chalk.red(cli.input[0])} is not recognized as a command`);
+}
 
 module.exports = { helpMenuText };
