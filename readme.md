@@ -43,6 +43,7 @@ The logo consists of a potato replacing the blue crystal in a Protoss <a href="h
 </ul>
 
 </details>
+
 ## Install
 
 ```
@@ -50,6 +51,9 @@ npm install -g protato
 ```
 
 ## Usage
+
+1. Create config in your package's root directory
+2. Run `protato watch` 
 
 ### CLI `Config`
 

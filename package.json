@@ -16,7 +16,7 @@
 		"node": ">=8"
 	},
 	"scripts": {
-		"start": "node build/main.js watch",
+		"start": "./build/main.js watch",
 		"dev": "babel-node src/index.js watch",
 		"build": "webpack --mode production --display minimal",
 		"test": "snyk test && ava"
