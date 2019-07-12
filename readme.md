@@ -29,6 +29,20 @@ This is a summary of how Protato fits into my design/development flow.
   * <a href="https://github.com/servexyz/protato-lib/pull/6">protato-lib/pull/6</a> for a play-by-play of the discovery process(all the things to not do)
 </details>
 
+<details>
+<summary>"Protato"</summary>
+The logo consists of a potato replacing the blue crystal in a Protoss <a href="https://liquipedia.net/starcraft2/Pylon_(Legacy_of_the_Void)">Pylon</a>
+<br />
+<br />
+<ul>
+  <li>“Protato” is a portmanteau of “potato” and “protoss”</li>
+  <ul>
+    <li>“Potato” from “hot potato”</li>
+    <li>“Protoss” because of 2-way teleporting (warp gate, recall, etc)</li>
+  </ul>
+</ul>
+
+</details>
 ## Install
 
 ```
