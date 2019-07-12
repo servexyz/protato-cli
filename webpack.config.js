@@ -19,19 +19,20 @@ module.exports = {
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
-				use: {
-					loader: "babel-loader",
-					options: {
-						babelrc: true
+				use: [
+					{
+						loader: "babel-loader",
+						options: {
+							babelrc: true
+						}
+					},
+					{
+						loader: "source-map-loader"
+					},
+					{
+						loader: "shebang-loader"
 					}
-				}
-			},
-			{
-				test: /\.js$/,
-				exclude: /node_modules/,
-				use: {
-					loader: "source-map-loader"
-				}
+				]
 			}
 		]
 	},

@@ -1,7 +1,6 @@
 {
-	"presets": [
-		"@babel/preset-env",
-		"@ava/babel-preset-stage-4",
+	"presets": ["@babel/preset-env", "@ava/babel-preset-stage-4"],
+	"plugins": [
 		[
 			"shebang",
 			{
