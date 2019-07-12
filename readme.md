@@ -1,8 +1,6 @@
-# Protato
-![travis CI](https://travis-ci.org/servexyz/protato-cli.svg?branch=master)
-
 ![protato logo](./docs/logo/protato.svg)
 
+![travis CI](https://travis-ci.org/servexyz/protato-cli.svg?branch=master)
 > HMR. Auto-update parent module's child dependency when you update a child dependency's file
 
 ## FAQ
