@@ -10,16 +10,19 @@
 		"url": "https://github.com/alechp"
 	},
 	"bin": {
-		"protato": "cli.js"
+		"protato": "src/index.js"
 	},
 	"engines": {
 		"node": ">=8"
 	},
 	"scripts": {
+		"start": "./src/index.js watch",
+		"dev": "babel-node src/index.js",
+		"build": "webpack --mode production --display minimal",
 		"test": "ava"
 	},
 	"files": [
-		"cli.js"
+		"src/index.js"
 	],
 	"keywords": [
 		"cli",
@@ -42,9 +45,25 @@
 		"tacker": "^0.1.2"
 	},
 	"devDependencies": {
+		"execa": "^2.0.3",
+		"@ava/babel-preset-stage-4": "^3.0.0",
+		"@babel/core": "7.5.0",
+		"@babel/node": "7.5.0",
 		"@babel/polyfill": "^7.4.4",
-		"ava": "^2.1.0",
-		"execa": "^2.0.3"
+		"@babel/preset-env": "7.5.2",
+		"@babel/register": "7.4.4",
+		"ava": "^2.2.0",
+		"babel-loader": "^8.0.6",
+		"duplicate-package-checker-webpack-plugin": "^3.0.0",
+		"nodemon": "^1.19.1",
+		"nodemon-webpack-plugin": "^4.0.8",
+		"npm-run-all": "^4.1.5",
+		"size-plugin": "^1.2.0",
+		"source-map-loader": "^0.2.4",
+		"webpack": "^4.35.3",
+		"webpack-cli": "^3.3.5",
+		"webpack-node-externals": "^1.7.2",
+		"webpackbar": "^3.2.0"
 	},
 	"ava": {
 		"require": [
