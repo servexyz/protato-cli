@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 const NodemonPlugin = require("nodemon-webpack-plugin");
 const DuplicatePackageCheckerPlugin = require("duplicate-package-checker-webpack-plugin");
 const NodeExternals = require("webpack-node-externals");
@@ -46,6 +47,7 @@ module.exports = {
 		}),
 		new DuplicatePackageCheckerPlugin(),
 		new SizePlugin(),
-		new WebpackBar()
+		new WebpackBar(),
+		new webpack.BannerPlugin({ banner: "#!/usr/bin/env node", raw: true })
 	]
 };

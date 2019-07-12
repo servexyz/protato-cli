@@ -1,4 +1,4 @@
-#!/usr/bin/env ./node_modules/bin/babel
+#!/usr/bin/env node
 "use strict";
 const log = console.log;
 const meow = require("meow");
