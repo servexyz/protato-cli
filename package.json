@@ -1,91 +1,92 @@
 {
-  "name": "protato",
-  "version": "0.1.0",
-  "description": "Hot Module Linking",
-  "license": "MIT",
-  "repository": "servexyz/protato-cli",
-  "author": {
-    "name": "Alec Hale-Pletka",
-    "email": "me@alechp.com",
-    "url": "https://github.com/alechp"
-  },
-  "bin": {
-    "protato": "build/main.js"
-  },
-  "engines": {
-    "node": ">=8"
-  },
-  "scripts": {
-    "start": "./build/main.js watch",
-    "dev": "babel-node src/index.js watch",
-    "build": "webpack --mode production --display minimal",
-    "test": "snyk test && ava"
-  },
-  "files": [
-    ".protato.js",
-    "src/index.js",
-    "build/main.js"
-  ],
-  "keywords": [
-    "cli",
-    "protato",
-    "protoss",
-    "potato",
-    "yalc",
-    "hot",
-    "module",
-    "linking",
-    "file",
-    "watch"
-  ],
-  "dependencies": {
-    "@babel/cli": "^7.5.0",
-    "chalk": "^2.4.2",
-    "condense-whitespace": "^2.0.0",
-    "fs-extra": "^8.1.0",
-    "meow": "^5.0.0",
-    "protato-lib": "^0.2.2",
-    "tacker": "^0.1.2"
-  },
-  "devDependencies": {
-    "@ava/babel-preset-stage-4": "^3.0.0",
-    "@babel/core": "7.5.4",
-    "@babel/node": "7.5.0",
-    "@babel/plugin-transform-runtime": "^7.5.0",
-    "@babel/polyfill": "^7.4.4",
-    "@babel/preset-env": "7.5.4",
-    "@babel/register": "7.4.4",
-    "@babel/runtime": "^7.5.4",
-    "ava": "^2.2.0",
-    "babel-loader": "^8.0.6",
-    "babel-plugin-shebang": "^1.0.0",
-    "duplicate-package-checker-webpack-plugin": "^3.0.0",
-    "execa": "^2.0.3",
-    "nodemon": "^1.19.1",
-    "nodemon-webpack-plugin": "^4.0.8",
-    "npm-run-all": "^4.1.5",
-    "shebang-loader": "0.0.1",
-    "size-plugin": "^1.2.0",
-    "snyk": "^1.193.1",
-    "source-map-loader": "^0.2.4",
-    "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.5",
-    "webpack-node-externals": "^1.7.2",
-    "webpackbar": "^3.2.0"
-  },
-  "ava": {
-    "require": [
-      "@babel/register"
-    ],
-    "babel": {
-      "testOptions": {
-        "babelrc": true,
-        "configFile": true
-      }
-    },
-    "files": [
-      "tests/**/*"
-    ],
-    "verbose": true
-  }
+	"name": "protato",
+	"version": "0.1.0",
+	"description": "Hot Module Linking",
+	"license": "MIT",
+	"repository": "servexyz/protato-cli",
+	"author": {
+		"name": "Alec Hale-Pletka",
+		"email": "me@alechp.com",
+		"url": "https://github.com/alechp"
+	},
+	"bin": {
+		"protato": "build/main.js"
+	},
+	"engines": {
+		"node": ">=8"
+	},
+	"scripts": {
+		"start": "./build/main.js watch",
+		"dev": "babel-node src/index.js watch",
+		"build": "webpack --mode production --display minimal",
+		"test": "snyk test && ava",
+		"test:travis": "ava"
+	},
+	"files": [
+		".protato.js",
+		"src/index.js",
+		"build/main.js"
+	],
+	"keywords": [
+		"cli",
+		"protato",
+		"protoss",
+		"potato",
+		"yalc",
+		"hot",
+		"module",
+		"linking",
+		"file",
+		"watch"
+	],
+	"dependencies": {
+		"@babel/cli": "^7.5.0",
+		"chalk": "^2.4.2",
+		"condense-whitespace": "^2.0.0",
+		"fs-extra": "^8.1.0",
+		"meow": "^5.0.0",
+		"protato-lib": "^0.2.2",
+		"tacker": "^0.1.2"
+	},
+	"devDependencies": {
+		"@ava/babel-preset-stage-4": "^3.0.0",
+		"@babel/core": "7.5.4",
+		"@babel/node": "7.5.0",
+		"@babel/plugin-transform-runtime": "^7.5.0",
+		"@babel/polyfill": "^7.4.4",
+		"@babel/preset-env": "7.5.4",
+		"@babel/register": "7.4.4",
+		"@babel/runtime": "^7.5.4",
+		"ava": "^2.2.0",
+		"babel-loader": "^8.0.6",
+		"babel-plugin-shebang": "^1.0.0",
+		"duplicate-package-checker-webpack-plugin": "^3.0.0",
+		"execa": "^2.0.3",
+		"nodemon": "^1.19.1",
+		"nodemon-webpack-plugin": "^4.0.8",
+		"npm-run-all": "^4.1.5",
+		"shebang-loader": "0.0.1",
+		"size-plugin": "^1.2.0",
+		"snyk": "^1.193.1",
+		"source-map-loader": "^0.2.4",
+		"webpack": "^4.35.3",
+		"webpack-cli": "^3.3.5",
+		"webpack-node-externals": "^1.7.2",
+		"webpackbar": "^3.2.0"
+	},
+	"ava": {
+		"require": [
+			"@babel/register"
+		],
+		"babel": {
+			"testOptions": {
+				"babelrc": true,
+				"configFile": true
+			}
+		},
+		"files": [
+			"tests/**/*"
+		],
+		"verbose": true
+	}
 }
