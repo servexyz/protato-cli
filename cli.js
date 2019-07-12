@@ -59,14 +59,13 @@ log(
 		2
 	)}`
 );
+
 async function watch() {
 	let { config } = require(path.resolve(process.cwd(), "./.protato.js"));
-	// let { config } = await fs.readJson(
-	// 	path.resolve(process.cwd(), ".protato.js")
-	// );
 	printMirror({ config }, "blue", "grey");
 	init(process.cwd(), config);
 }
+
 switch (cli.input[0].toLowerCase()) {
 	case "watch":
 		watch();
