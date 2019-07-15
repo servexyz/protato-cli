@@ -5,7 +5,9 @@ const meow = require("meow");
 const { init } = require("protato-lib");
 const { printMirror } = require("tacker");
 const path = require("path");
+const isEmpty = require("is-empty");
 const chalk = require("chalk");
+const fs = require("fs-extra");
 
 const helpMenuText = `$ protato --help
 
@@ -61,17 +63,23 @@ log(
 );
 
 async function watch() {
-	let { config } = require(path.resolve(process.cwd(), "./.protato.js"));
+	let dir = path.resolve(process.cwd(), ".protato.json");
+	printMirror({ dir }, "magenta", "grey");
+	let config = await fs.readJson(dir);
 	printMirror({ config }, "blue", "grey");
 	init(process.cwd(), config);
 }
 
-switch (cli.input[0].toLowerCase()) {
-	case "watch":
-		watch();
-		break;
-	default:
-		log(`${chalk.red(cli.input[0])} is not recognized as a command`);
+//TODO: Add checksum for empty command str
+
+if (!isEmpty(cli.input[0])) {
+	switch (cli.input[0].toLowerCase()) {
+		case "watch":
+			watch();
+			break;
+		default:
+			log(`${chalk.red(cli.input[0])} is not recognized as a command`);
+	}
 }
 
 module.exports = { helpMenuText };

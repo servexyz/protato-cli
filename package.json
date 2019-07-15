@@ -16,7 +16,7 @@
 		"node": ">=8"
 	},
 	"scripts": {
-		"start": "./build/main.js watch",
+		"start": "npm run build && ./build/main.js watch",
 		"dev": "babel-node src/index.js watch",
 		"build": "webpack --mode production --display minimal",
 		"test": "snyk test && ava",
@@ -44,6 +44,7 @@
 		"chalk": "^2.4.2",
 		"condense-whitespace": "^2.0.0",
 		"fs-extra": "^8.1.0",
+		"is-empty": "^1.2.0",
 		"meow": "^5.0.0",
 		"protato-lib": "^0.2.3",
 		"tacker": "^0.1.2"
