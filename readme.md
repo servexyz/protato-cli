@@ -30,7 +30,7 @@ This is a summary of how Protato fits into my design/development flow.
 </details>
 
 <details>
-<summary>"Protato"</summary>
+<summary>Name</summary>
 The logo consists of a potato replacing the blue crystal in a Protoss <a href="https://liquipedia.net/starcraft2/Pylon_(Legacy_of_the_Void)">Pylon</a>
 <br />
 <br />
@@ -92,16 +92,16 @@ npm install -g protato
 
 ### CLI `Commands`
 
-| Status | Name     | Description                                                      |
-|:-------|:---------|:-----------------------------------------------------------------|
-| :x:    | `yalc`   | List your current packages; install yalc if directory not found. |
-| :x:    | `config` | Generate an empty config if you don't have one in your CWD.      |
-| :x:    | `watch`  | Begin watching your child modules for updates                    |
+| Status                  | Name     | Description                                                      |
+|:------------------------|:---------|:-----------------------------------------------------------------|
+| :white_check_mark:      | `watch`  | Begin watching your child modules for updates                    |
+| :ballot_box_with_check: | `yalc`   | List your current packages; install yalc if directory not found. |
+| :ballot_box_with_check: | `config` | Generate an empty config if you don't have one in your CWD.      |
 
 ### CLI `Flags`
 
-| Status | Name     | Description                                          |
-|:-------|:---------|:-----------------------------------------------------|
-| :x:    | `--link` | Add child package symlink in your parent project     |
-| :x:    | `--add`  | Pull child package contents into your parent project |
-| :x:    | `--help` | Print help menu                                      |
+| Status                  | Name     | Description                                          |
+|:------------------------|:---------|:-----------------------------------------------------|
+| :white_check_mark:      | `--help` | Print help menu                                      |
+| :ballot_box_with_check: | `--link` | Add child package symlink in your parent project     |
+| :ballot_box_with_check: | `--add`  | Pull child package contents into your parent project |
