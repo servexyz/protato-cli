@@ -59,31 +59,31 @@ npm install -g protato
 
 <details>
 <summary>Name & Location</summary>
-<b>.protato.js</b> should be stored in your project's root directory. If your root directory and your parent are one in the same, then set the directory to "."
+<b>.protato.json</b> should be stored in your project's root directory. If your root directory and your parent are one in the same, then set the directory to "."
 </details>
 
 <details>
 <summary>Example</summary>
 
-<pre><code class="language-javascript">
-export const config = {
-  parent: {
-    dir: "sandbox/node-starter"
-  },
-  children: [
-    {
-      dir: "sandbox/npm-starter-sample-module",
-      src: "src"
-    },
-    {
-      dir: "sandbox/library-genesis",
-      src: "src"
-    }
-  ]
-};
+<pre><code class="language-json">
+{
+	"parent": {
+		"dir": "sandbox/node-starter"
+	},
+	"children": [
+		{
+			"dir": "sandbox/npm-starter-sample-module",
+			"src": "src"
+		},
+		{
+			"dir": "sandbox/library-genesis",
+			"src": "src"
+		}
+	]
+}
 </code></pre>
 
-- <b><em>.protato.js</em></b> this file should be declared at the root of your project
+- <b><em>.protato.json</em></b> this file should be declared at the root of your project
 - <b>parent</b> is your main project; your entry point. It will consume children modules and do something useful with them.
 - <b>children</b> are the modules that will be "installed" into the parent module directory
 - <b>"dir"</b> refers to the relative directory where your projects are stored <em>from</em> your current working directory. This value will default to `process.cwd()`. You can override this by setting the environment variable <code>process.env.configRootDir</code>

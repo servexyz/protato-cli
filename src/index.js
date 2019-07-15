@@ -67,7 +67,8 @@ async function watch() {
 	printMirror({ dir }, "magenta", "grey");
 	let config = await fs.readJson(dir);
 	printMirror({ config }, "blue", "grey");
-	init(process.cwd(), config);
+	// init(process.cwd(), config);
+	init();
 }
 
 //TODO: Add checksum for empty command str
