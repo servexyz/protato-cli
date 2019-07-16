@@ -1,4 +1,4 @@
-![protato logo](./docs/logo/ProtatoZoomedOutSideMarginOnly.svg)
+![protato logo](docs/logo/ProtatoZoomedOutSideMarginOnly.svg)
 
 ![travis CI](https://travis-ci.org/servexyz/protato-cli.svg?branch=master)
 > HMR. Auto-update parent module's child dependency when you update a child dependency's file
@@ -15,7 +15,7 @@ Auto-update parent module when a child module's file changes.
 There are a lot of great projects (lerna, yarn workspaces, vscode) that solve code organization issues. I wanted a HMR tool that parsed a config and worked with my monolith tool of choice ( <a href="https://www.npmjs.com/package/repo-genesis">repo-genesis</a> )
 
 This is a summary of how Protato fits into my design/development flow.
-<img src="./docs/Flows - UI - Protato - Protato - Tech Summary.png" alt="protato tech summary"/>
+<img src="./docs/ProtatoFlow.png" alt="protato tech summary"/>
 </details>
 
 <details>
