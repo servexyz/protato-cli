@@ -1,7 +1,7 @@
 {
 	"name": "protato",
 	"version": "0.2.5",
-	"description": "Hot Module Linking",
+	"description": "HMR. Auto-update parent module's child dependency when you update that child dependency's file",
 	"license": "MIT",
 	"repository": "servexyz/protato-cli",
 	"author": {
@@ -33,9 +33,11 @@
 		"protoss",
 		"potato",
 		"yalc",
-		"hot",
-		"module",
+		"hot module",
+		"npm link",
+		"yarn link",
 		"linking",
+		"update child dependencies",
 		"file",
 		"watch"
 	],
