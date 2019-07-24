@@ -1,14 +1,9 @@
 ![protato logo](docs/logo/ProtatoHQ.png)
 
 ![travis CI](https://travis-ci.org/servexyz/protato-cli.svg?branch=master)
-> HMR. Auto-update parent module's child dependency when you update a child dependency's file
+> HMR. Auto-update parent module's child dependency when you update that child dependency's file
 
 ## FAQ
-
-<details>
-  <summary>What</summary>
-Auto-update parent module when a child module's file changes.
-</details>
 
 <details>
   <summary>Why</summary>
@@ -44,28 +39,32 @@ The logo consists of a potato replacing the blue crystal in a Protoss <a href="h
 
 </details>
 
-## Install
+## Install (Optional)
+> If you'd rather not install, you can use [npx](https://www.npmjs.com/package/npx) 
 
-```
-npm install -g protato
-```
+* **Install CLI globally**
+`npm install -g protato`
+
+
+* **Install CLI as dev dependency**
+`npm install -D protato`
 
 ## Usage
 
-1. Create config in your package's root directory
-2. Run `protato watch` 
+Watch your files and update your dependency tree automatically
+```
+protato watch
+```
 
-### CLI `Config`
+---
 
-<details>
-<summary>Name & Location</summary>
-<b>.protato.json</b> should be stored in your project's root directory. If your root directory and your parent are one in the same, then set the directory to "."
-</details>
 
-<details>
-<summary>Example</summary>
+## CLI `Config` 
+> In order to watch your files, you need to supply protato with a config file.
 
-<pre><code class="language-json">
+
+**Example used in unit tests**
+```json
 {
 	"parent": {
 		"dir": "sandbox/node-starter"
@@ -81,14 +80,29 @@ npm install -g protato
 		}
 	]
 }
-</code></pre>
+```
 
-- <b><em>.protato.json</em></b> this file should be declared at the root of your project
-- <b>parent</b> is your main project; your entry point. It will consume children modules and do something useful with them.
-- <b>children</b> are the modules that will be "installed" into the parent module directory
-- <b>"dir"</b> refers to the relative directory where your projects are stored <em>from</em> your current working directory. This value will default to `process.cwd()`. You can override this by setting the environment variable <code>process.env.configRootDir</code>
-- <b>"src"</b> refers to the source directory where your source code is stored for your child project. It's the directory that's being watched. Hypothetically, you could make it your build directory as well if your project completely recompiles & rebuilds on every save (although I haven't tested this hypothetical; might be dragons here)
-  </details>
+**Abstract example**
+
+* `protato-cli` 
+  * `protato-lib`
+  * `tacker`
+
+In this project example, I want "protato-cli" to update its dependencies whenever "protato-lib" or "tacker" are updated locally. Let's say I changed `protato-lib/src/index.js`, it would then trigger an update which would re-link the packages. 
+
+**Breaking down the example**
+
+| Name         | Category              | Attributes Description                                                    |
+|:-------------|:----------------------|:--------------------------------------------------------------------------|
+| protato.json | Config file name      | this file should be declared at the root of your project                  |
+| parent       | Top-level key         | this represents your entry point project; it relies on your child modules |
+| children     | Top-level key         | modules you are working on locally                                        |
+| dir          | Parent & Children key | root of children to watch or parent project to update; relative from cwd  |
+| src          | Children key          | specific directory to watch                                               |
+
+---
+
+## Roadmap
 
 ### CLI `Commands`
 
@@ -105,3 +119,11 @@ npm install -g protato
 | :white_check_mark:      | `--help` | Print help menu                                      |
 | :ballot_box_with_check: | `--link` | Add child package symlink in your parent project     |
 | :ballot_box_with_check: | `--add`  | Pull child package contents into your parent project |
+
+### Minor Features
+
+* Currently doesn't handle builds. 
+> TODO: Create CLI flag and library logic to parse "build" in package.json before updating dependency
+
+* Each module assumes the same CWD.
+> TODO: Enable per-child-module cwd. Add object to config and handle parsing
