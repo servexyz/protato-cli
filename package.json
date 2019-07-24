@@ -1,6 +1,6 @@
 {
 	"name": "protato",
-	"version": "0.2.6",
+	"version": "0.2.7",
 	"description": "HMR. Auto-update parent module's child dependency when you update that child dependency's file",
 	"license": "MIT",
 	"repository": "servexyz/protato-cli",
