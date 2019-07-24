@@ -60,7 +60,7 @@ protato watch
 
 
 ## CLI `Config` 
-> In order to watch your files, you need to supply protato with a config file.
+> In order to watch your files, you need to supply protato with a config file. It must be named .protato.json
 
 
 **Example used in unit tests**
@@ -81,6 +81,8 @@ protato watch
 	]
 }
 ```
+
+What differentiates this unit test example is I'm making the parent a subdirectory as well. Normally, your parent directory would be your root directory/cwd. The sandbox directory was initialized using [repo-genesis](https://www.npmjs.com/package/repo-genesis-cli)
 
 **Abstract example**
 
@@ -122,8 +124,21 @@ In this project example, I want "protato-cli" to update its dependencies wheneve
 
 ### Minor Features
 
-* Currently doesn't handle builds. 
+* Currently doesn't update child module builds before re-linking 
 > TODO: Create CLI flag and library logic to parse "build" in package.json before updating dependency
 
-* Each module assumes the same CWD.
-> TODO: Enable per-child-module cwd. Add object to config and handle parsing
+* Each child module relies on the same root directory. This is prohibitive.
+> TODO: Enable per-child-module cwd. Add object to config and handle parsing. 
+
+* Currently, child modules cannot exist outside of the current "monolith". They assume they same CWD
+> TODO:This is fine if repo-genesis is being used. But it could be annoying for others. Fix to this is allow absolute pathing. Add a "cwd" object to the config to specify root directory. Override the cwd default (be that process.cwd() or process.env.configRootDir)
+
+* It'd be great to have a demo project. 
+> TODO: Have to make some changes to repo-genesis (to allow auto-install modules)
+
+* `process.env.configRootDir` was added but never tested or discussed in readme
+> TODO: Write unit test and update readme accordingly
+
+* Especially in the case of newly cloned projects, it's annoying that protato will throw IF node_modules are missing. 
+> CONTEXT: While npm install is an easy fix, it's obnoxious if there are multiple subdirectories being cloned via repo-genesis
+> TODO: Add auto-install node_modules feature to protato-lib
