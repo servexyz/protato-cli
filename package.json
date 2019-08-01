@@ -48,7 +48,7 @@
 		"fs-extra": "^8.1.0",
 		"is-empty": "^1.2.0",
 		"meow": "^5.0.0",
-		"protato-lib": "^0.2.5",
+		"protato-lib": "^0.2.6",
 		"tacker": "^0.1.2"
 	},
 	"devDependencies": {
