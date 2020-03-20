@@ -47,7 +47,7 @@
 		"condense-whitespace": "^2.0.0",
 		"fs-extra": "^8.1.0",
 		"is-empty": "^1.2.0",
-		"meow": "^5.0.0",
+		"meow": "^6.1.0",
 		"protato-lib": "^0.2.6",
 		"tacker": "^0.1.2"
 	},
